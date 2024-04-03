@@ -27,4 +27,19 @@ public class ComentarioServiceImplementation implements ComentariosService {
         return comentariosRepository.findAll();
 
     }
+
+    @Override
+    public void delete(Integer id) {
+
+    }
+
+    @Override
+    public Comentaries findbyId(Integer id) {
+        return null;
+    }
+
+    @Override
+    public List<Comentaries> findByAccesibilidadAndNombre(boolean access, String nombre) {
+        return null;
+    }
 }
