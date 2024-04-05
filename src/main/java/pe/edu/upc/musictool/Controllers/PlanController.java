@@ -44,7 +44,7 @@ public class PlanController {
     }
     @GetMapping("/find")
     public List<PlanDTO> buscarFecha(@RequestParam String nombrePlanes){
-        return iP.findByNombre(nombrePlanes).stream().map(y->{
+        return iP.findByNombrePlanes(nombrePlanes).stream().map(y->{
             ModelMapper m= new ModelMapper();
             return m.map(y,PlanDTO.class);
         }).collect(Collectors.toList());

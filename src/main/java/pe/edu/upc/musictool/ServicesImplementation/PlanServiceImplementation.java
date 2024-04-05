@@ -30,7 +30,7 @@ public class PlanServiceImplementation implements PlanService {
     }
 
     @Override
-    public List<Plans> findByNombre(String nombrePlanes) {
-        return findByNombre(nombrePlanes);
+    public List<Plans> findByNombrePlanes(String nombrePlanes) {
+        return findByNombrePlanes(nombrePlanes);
     }
 }

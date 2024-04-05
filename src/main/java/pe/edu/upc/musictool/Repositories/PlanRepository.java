@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface PlanRepository extends JpaRepository<Plans,Integer> {
-    public List<Plans> findByNombre(String nombrePlanes);
+    public List<Plans> findByNombrePlanes(String nombrePlanes);
 }

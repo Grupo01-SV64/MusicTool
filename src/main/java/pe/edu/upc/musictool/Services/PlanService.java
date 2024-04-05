@@ -14,5 +14,5 @@ public interface PlanService {
 
     public Plans findbyId(Integer id);
 
-    public List<Plans> findByNombre(String nombrePlanes);
+    public List<Plans> findByNombrePlanes(String nombrePlanes);
 }
