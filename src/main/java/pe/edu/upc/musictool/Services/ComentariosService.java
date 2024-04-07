@@ -2,6 +2,7 @@ package pe.edu.upc.musictool.Services;
 
 import pe.edu.upc.musictool.Entities.Comentaries;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface ComentariosService {
@@ -10,6 +11,5 @@ public interface ComentariosService {
     public void delete (Integer id);
 
     public Comentaries findbyId(Integer id);
-
-    public List<Comentaries> findByAccesibilidadAndNombre(boolean access, String nombre);
+ public List<Comentaries>COMENTARIES_LIST(LocalDate fecha);
 }

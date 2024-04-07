@@ -13,6 +13,14 @@ public class ComentarieDTO {
 
     private LocalDate fechaComentario;
 
+    public ComentarieDTO(String comentario, LocalDate fechaComentario) {
+        this.comentario = comentario;
+        this.fechaComentario = fechaComentario;
+    }
+
+    public ComentarieDTO() {
+    }
+
     public String getComentario() {
         return comentario;
     }

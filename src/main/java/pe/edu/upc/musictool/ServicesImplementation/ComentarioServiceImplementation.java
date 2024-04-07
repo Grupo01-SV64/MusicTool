@@ -8,13 +8,13 @@ import pe.edu.upc.musictool.Entities.Comentaries;
 import pe.edu.upc.musictool.Repositories.ComentariosRepository;
 import pe.edu.upc.musictool.Services.ComentariosService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
 public class ComentarioServiceImplementation implements ComentariosService {
 
     @Autowired
-
     private ComentariosRepository comentariosRepository;
 
     @Override
@@ -39,7 +39,8 @@ public class ComentarioServiceImplementation implements ComentariosService {
     }
 
     @Override
-    public List<Comentaries> findByAccesibilidadAndNombre(boolean access, String nombre) {
-        return null;
+    public List<Comentaries> COMENTARIES_LIST(LocalDate fecha) {
+        return comentariosRepository.findByfechaComentario(fecha);
     }
+
 }

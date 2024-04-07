@@ -3,21 +3,22 @@ package pe.edu.upc.musictool.Controllers;
 
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.upc.musictool.DTOs.ComentarieDTO;
 import pe.edu.upc.musictool.Entities.Comentaries;
 import pe.edu.upc.musictool.Services.ComentariosService;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-@AllArgsConstructor
+
 @RestController
 @RequestMapping("api/comentarios")
 public class ComentaryController {
-
-    private ComentariosService  libraryService;
-
+    @Autowired
     private ComentariosService comentariosService;
 
 
@@ -44,8 +45,9 @@ public class ComentaryController {
         return ComentarieDTO;
     }
     @GetMapping("/find")
-    public List<ComentarieDTO> buscarFecha(@RequestParam boolean acess , @RequestParam String nombre){
-        return comentariosService.findByAccesibilidadAndNombre(acess,nombre).stream().map(y->{
+    public List<ComentarieDTO> buscarFecha(@RequestParam LocalDate fecha){
+
+        return comentariosService.COMENTARIES_LIST(fecha).stream().map(y->{
             ModelMapper m= new ModelMapper();
             return m.map(y,ComentarieDTO.class);
         }).collect(Collectors.toList());
