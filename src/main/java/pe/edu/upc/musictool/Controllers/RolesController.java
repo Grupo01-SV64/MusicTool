@@ -25,7 +25,7 @@ public class RolesController {
            iG.insert(g);
        }catch (Exception e){
            e.printStackTrace();
-          // Log.i("ERROR POST MAPPING", e.toString());
+
        }
     }
 
@@ -58,5 +58,4 @@ public class RolesController {
             return m.map(y, RolesDTO.class);
         }).collect(Collectors.toList());
     }
-
 }
