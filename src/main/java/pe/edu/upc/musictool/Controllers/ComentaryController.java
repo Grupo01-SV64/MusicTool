@@ -18,9 +18,9 @@ import java.util.stream.Stream;
 @RestController
 @RequestMapping("api/comentarios")
 public class ComentaryController {
+
     @Autowired
     private ComentariosService comentariosService;
-
 
     @PostMapping
     public void save(@RequestBody ComentarieDTO comentariosDTO) {

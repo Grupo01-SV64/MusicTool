@@ -30,9 +30,8 @@ public class IRolesServiceImplement implements IRolService {
 
     @Override
     public Roles findById(Integer id) {
-       return gaR.findById(id).orElse(new Roles());
+       return gaR.findById(id).orElseThrow();
     }
-
 
     @Override
     public List<Roles>findByName(String name) {

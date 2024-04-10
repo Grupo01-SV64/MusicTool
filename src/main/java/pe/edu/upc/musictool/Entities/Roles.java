@@ -8,29 +8,46 @@ import lombok.Setter;
 @Table(name ="Roles")
 public class Roles {
 
-    @Getter
     @Id
-    @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Getter
-    @Setter
     @Column(name = "nombreRol", nullable = false, length = 35)
     private String nombreRol;
-    @Getter
-    @Setter
-    @Column(name = "descripcion",nullable = false, length = 255)
+
+    @Column(name = "descripcionRol",nullable = false, length = 255)
     private String descripcionRol;
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    @Override
-    public String toString() {
-        return "Roles{" +
-                "id=" + id +
-                ", nombreRol='" + nombreRol + '\'' +
-                ", descripcionRol='" + descripcionRol + '\'' +
-                '}';
+    public String getNombreRol() {
+        return nombreRol;
+    }
+
+    public void setNombreRol(String nombreRol) {
+        this.nombreRol = nombreRol;
+    }
+
+    public String getDescripcionRol() {
+        return descripcionRol;
+    }
+
+    public void setDescripcionRol(String descripcionRol) {
+        this.descripcionRol = descripcionRol;
+    }
+
+    public Roles(int id, String nombreRol, String descripcionRol) {
+        this.id = id;
+        this.nombreRol = nombreRol;
+        this.descripcionRol = descripcionRol;
+    }
+
+    public Roles() {
     }
 }

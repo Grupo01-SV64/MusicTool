@@ -7,9 +7,12 @@ import java.util.List;
 
 public interface ComentariosService {
     public void create(Comentaries comentarios);
+
     public List<Comentaries> COMENTARIOS_LIST();
-    public void delete (Integer id);
+
+    public void delete(Integer id);
 
     public Comentaries findbyId(Integer id);
- public List<Comentaries>COMENTARIES_LIST(LocalDate fecha);
+
+    public List<Comentaries> COMENTARIES_LIST(LocalDate fecha);
 }
