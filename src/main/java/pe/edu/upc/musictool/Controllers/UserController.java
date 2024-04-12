@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("musictool/usuarios")
+@RequestMapping("musictool/users")
 public class UserController {
     @Autowired
     private IUserService uS;

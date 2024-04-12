@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("musictool/planes")
+@RequestMapping("musictool/plans")
 public class PlanController {
     @Autowired
     private PlanService iP;
