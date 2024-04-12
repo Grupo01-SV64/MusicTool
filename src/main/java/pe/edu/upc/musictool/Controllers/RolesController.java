@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/roles")
+@RequestMapping("musictool/roles")
 public class RolesController {
     @Autowired
     private IRolService iG;

@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @AllArgsConstructor
 @RestController
-@RequestMapping("api/libraries")
+@RequestMapping("musictool/libraries")
 public class LibraryController {
 
     private LibraryService libraryService;

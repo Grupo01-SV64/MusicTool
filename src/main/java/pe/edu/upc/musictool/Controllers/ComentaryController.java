@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 
 
 @RestController
-@RequestMapping("api/comentarios")
+@RequestMapping("musictool/comentarios")
 public class ComentaryController {
 
     @Autowired
